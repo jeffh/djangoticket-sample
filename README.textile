@@ -1,0 +1,10 @@
+h1. Django Tickets
+
+Django Tickets is a simple ticket tracker system. It's sole existence is to teach
+how to use django.
+
+h1. How is this "teaching"?
+
+It's not. It's a reference to the screencast over "here":http://net.tutsplus.com/videos/screencasts/diving-into-django/.
+
+If you want help, drop an email or "tweet to me":http://twitter.com/jeffhui
