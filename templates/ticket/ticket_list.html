@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}View Tickets - {% endblock %}
+{% block content %}
+<h2>View Tickets</h2>
+{% if object_list %}
+<table cellspacing="0" class="list">
+	<tr>
+		<th>Ticket</th>
+		<th>Description</th>
+		<th>Status</th>
+		<th>Assigned To</th>
+	</tr>
+	{% for obj in object_list %}
+	<tr>
+		<td><a href="{% url ticket-detail obj.id %}">{{ obj.id }}</a></td>
+		<td><a href="{% url ticket-detail obj.id %}">{{ obj.name}}</a></td>
+		<td>{{ obj.status|capfirst }}</td>
+		<td>{% firstof obj.assigned_to 'Nobody' %}</td>
+	</tr>
+	{% endfor %}
+</table>
+{% else %}
+<p>There are no tickets!</p>
+{% endif %}
+{% endblock content %}
